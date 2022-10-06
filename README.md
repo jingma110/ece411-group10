@@ -1,5 +1,4 @@
-# ECE411 Group 10
-## 2022 Fall Practicum Project
+# ECE411 Group 10 - 2022 Fall Practicum Project
 
 ### Members
 * Jing Ma
