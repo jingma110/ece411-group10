@@ -18,6 +18,7 @@ WIP
 ### Actuators
 - Servo Motor SG90
 - LED Lasor 6mm 5mW Red Dot Laser
+- LCD Screen 1602 w/ I2C controller
 ### Misc
 - Wires
 - RFID Fob
