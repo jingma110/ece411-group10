@@ -15,6 +15,7 @@ WIP
 ### Sensors
 - Photoresistors
 - RFID Sensor RC522
+- Button
 ### Actuators
 - Servo Motor SG90
 - LED Lasor 6mm 5mW Red Dot Laser
@@ -22,3 +23,9 @@ WIP
 ### Misc
 - Wires
 - RFID Fob
+- Resistors
+- 3D Printed Enclosure
+
+## Software
+- [KiCAD](https://www.kicad.org/) -- Schematic and PCB Layout
+- [FreeCAD](https://www.freecadweb.org/) -- 3D Modeling
