@@ -51,15 +51,11 @@ void loop()
   byte buttonState = digitalRead(buttonPin);
   buttonState = digitalRead(buttonPin);
 
-  if (millis() - lastTimeButtonStateChanged > debounceDuration) {
-    byte buttonState = digitalRead(buttonPin);
-    if (buttonState != lastbuttonState) {
-      lastTimeButtonStateChanged = millis();
-      lastbuttonState = buttonState;
-      if (buttonState == LOW) {
-        Myservo.write(pos);
-      }
-    }
+  if (digitalRead(buttonPin) == LOW) {
+    Myservo.write(180);
+  }
+  else {
+    Myservo.write(0);
   }
 
 
@@ -108,7 +104,31 @@ void loop()
     if (laserPin1State == HIGH ){
       delay(100);
       int value = analogRead(A0);
+      int value1 = analogRead(A1);
+      int value2 = analogRead(A2);
       if (value < 900 && laserPin1State == HIGH) {
+        ledState2 = HIGH;
+        digitalWrite(ledPin2, ledState2);
+        digitalWrite(buzzer, LOW); //Temp
+        lcd.backlight();
+        lcd.setCursor(1,0);
+        lcd.print("Invade!!");
+        lcd.setCursor(1,1);
+        lcd.print("Warning!!");
+        Myservo.write(180);
+      }
+      else if (value1 < 900 && laserPin1State == HIGH) {
+        ledState2 = HIGH;
+        digitalWrite(ledPin2, ledState2);
+        digitalWrite(buzzer, LOW); //Temp
+        lcd.backlight();
+        lcd.setCursor(1,0);
+        lcd.print("Invade!!");
+        lcd.setCursor(1,1);
+        lcd.print("Warning!!");
+        Myservo.write(180);
+      }
+      else if (value2 < 900 && laserPin1State == HIGH) {
         ledState2 = HIGH;
         digitalWrite(ledPin2, ledState2);
         digitalWrite(buzzer, LOW); //Temp
